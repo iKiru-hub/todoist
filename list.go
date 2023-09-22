@@ -83,7 +83,7 @@ func List(c *cli.Context) error {
 	defer writer.Flush()
 
 	if c.Bool("header") {
-		writer.Write([]string{"ID", "Priority", "DueDate", "Project", "Labels", "Content"})
+		writer.Write([]string{"Priority", "DueDate", "Project", "Labels", "Content"})  // deleted "ID" from header
 	}
 
 	for _, strings := range itemList {
